@@ -98,7 +98,7 @@ def main():
     print('after transpose rgb.shape', rgb.shape)
     rgb = rgb.astype(np.float32)
     # save to disk
-    RGB_path = os.path.join(data_dir,'20170829_RGB_composite_v3_100.tif')
+    RGB_path = os.path.join(data_dir,'20170829_RGB_composite_v3.tif')
     # RGB_img = Image(RGB_path)
     raster_io.save_numpy_array_to_rasterfile(rgb,RGB_path,VH_path)
 
