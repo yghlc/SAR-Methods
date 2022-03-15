@@ -126,6 +126,10 @@ def main():
     # VH_path = os.path.join(data_dir,'20170829_VH_0.00089831528412.tif')
     # VV_path = os.path.join(data_dir,'20170829_VV_0.00089831528412.tif')
 
+    # Something to know and maybe fix in the future:
+    # in the cluster funciton, lower_quantile=0.01 is not set, it mean some extreme low value may exists.
+    # the RGB at 100 m and 10 m different, especially the 3rd band, although they look visual the same in QGIS
+    # after resample, they have different max and min value, then quantile clip and scale to 0 and 1, be sure to be differernt.
     compose_RGB_conor(VH_path,VV_path)
 
 
